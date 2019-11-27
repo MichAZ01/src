@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainserviceService } from './service/mainservice.service';
 import { EditarEventoComponent } from './components/eventos/editar-evento/editar-evento.component';
 import { AgregarEventoComponent } from './components/eventos/agregar-evento/agregar-evento.component';
+import { AtraccionesComponentComponent } from './components/atracciones/atracciones-component/atracciones-component.component';
 
 export function mainServiceProvider(provider: MainserviceService) {
   return () => provider.init();
@@ -31,7 +32,8 @@ export function mainServiceProvider(provider: MainserviceService) {
     RegistrarseComponent,
     EventosComponentComponent,
     EditarEventoComponent,
-    AgregarEventoComponent
+    AgregarEventoComponent,
+    AtraccionesComponentComponent
   ],
   imports: [
     BrowserModule,
