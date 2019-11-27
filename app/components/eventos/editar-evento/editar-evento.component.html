@@ -1,0 +1,65 @@
+<div class="container-fluid" id="advanced-search-form">
+<div id="contenedorInformacion">
+    <form style="color: black;" role="form">
+        <div class="form-group">
+            <label for="actividad-desc">Actividad</label>
+            <input [(ngModel)]="mainservice.editarEvento.actividad" type="text" class="form-control"
+                placeholder="Actividad" id="actividad-desc-editar" name="actividad-desc">
+        </div>
+        <div class="form-group">
+            <label for="fecha-actividad">Fecha de actividad</label>
+            <input [(ngModel)]="mainservice.editarEvento.fecha" type="date" class="form-control"
+                placeholder="Fecha de actividad" id="fecha-actividad-editar" name="fecha-actividad">
+        </div>
+        <div class="form-group">
+            <label for="descripcion-actividad">Descripción</label>
+            <input [(ngModel)]="mainservice.editarEvento.descripcion" type="text" class="form-control"
+                placeholder="Descripción" id="descripcion-actividad-editar" name="descripcion-actividad">
+        </div>
+        <div class="form-group">
+            <label for="provincia1">Provincia</label>
+            <select id="provinciaDropdown-editar" name="provinciaDropdown" class="dropdwn custom-select form-control"
+                [(ngModel)]="mainservice.editarEvento.ubicacion.provincia" (change)="filterCantones(true)">
+                <option *ngFor="let prov of mainservice.direcciones"
+                    [selected]="prov.provincia == mainservice.editarEvento.provincia" value={{prov.canton}}>
+                    {{prov.provincia}}</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="canton1">Cantón</label>
+            <select id="cantonDropdown-editar" name="cantonDropdown" class="dropdwn custom-select form-control"
+                [(ngModel)]="mainservice.editarEvento.ubicacion.canton">
+                <option *ngFor="let canton of mainservice.cantonesFiltrados"
+                    [selected]="canton.canton == mainservice.editarEvento.canton" value={{canton.canton}}>
+                    {{canton.canton}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="distrito1">Distrito</label>
+            <select id="distritoDropdown-editar" name="distritoDropdown" class="dropdwn custom-select form-control"
+                [(ngModel)]="mainservice.editarEvento.ubicacion.distrito">
+                <option *ngFor="let distrito of mainservice.distritosFiltrados"
+                    [selected]="distrito.distrito == mainservice.editarEvento.distrito" value={{distrito.distrito}}>
+                    {{distrito.distrito}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="nombre-contacto-actividad">Nombre contacto</label>
+            <input [(ngModel)]="mainservice.editarEvento.informacioncontacto.nombre" type="text" class="form-control"
+                placeholder="Nombre contacto" id="nombre-contacto-actividad-editar" name="nombre-contacto-actividad">
+        </div>
+        <div class="form-group">
+            <label for="correo-contacto-actividad">Correo de contacto</label>
+            <input [(ngModel)]="mainservice.editarEvento.informacioncontacto.correo" type="text" class="form-control"
+                placeholder="Correo de contacto" id="correo-contacto-actividad-editar" name="correo-contacto-actividad">
+        </div>
+        <div class="form-group">
+            <label for="telefono-actividad-editar">Teléfono</label>
+            <input [(ngModel)]="mainservice.editarEvento.informacioncontacto.telefono" type="text" class="form-control"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Teléfono" id="telefono-actividad-editar" name="telefono-actividad">
+        </div>
+        <div class="clearfix"></div>
+    </form>
+</div>
+</div>
