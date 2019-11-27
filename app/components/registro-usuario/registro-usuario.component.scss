@@ -1,0 +1,161 @@
+.container1{
+    width: 100%;
+    min-height: 100%;
+}
+
+.main-div{
+    width: 100%;
+    min-height: 100%;
+}
+
+.logo-row{
+    margin-top: 1%;
+    width: 100%;
+    min-height: 20%;
+}
+
+.logo{
+    margin-top: 2%;
+}
+
+.slogan-row{
+    width: 100%;
+    min-height: 8%;
+    margin-top: 4%;
+}
+
+.logIn-row{
+    width: 100%;
+    min-height: 70%;
+    margin-top: 4%;
+}
+
+.logIn{
+    width: 38%;
+    min-height: 100%;
+    background-color: rgba(239, 240, 240, 0.6);
+    border-radius: 20px;
+}
+
+.firstLine{
+    margin-top: 4%;
+    margin-left: -2%;
+}
+
+.NameLabel{
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.BirthDateLabel{
+    font-size: 17.5px;
+    opacity: 0.7;
+}
+
+.btnLogIn{
+    background-color: rgba(242, 95, 87) ;
+    border-color: rgba(242, 95, 87);
+    margin-right: 24px;
+    margin-bottom: 13px;
+}
+
+@media screen and (max-width: 800px){
+    .logIn-row{
+        height: 65%;
+    }
+
+    .main-div{
+        height: 1050px;
+    }
+
+}
+
+#advanced-search-form{
+    font-family: Quicksand;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 5px auto 0;
+    margin-bottom: 40px;
+    padding: 40px;
+    color: #858b8e;
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+
+#advanced-search-form h2{
+    padding-bottom: 20px;
+    margin: 10px 20px;
+    font-size: 24px;
+}
+
+#advanced-search-form hr{
+    margin-top: 38px;
+    margin-bottom: 54px;
+    margin-left:3px;
+    border: 1px solid #cccccc;
+
+}
+
+#advanced-search-form .form-group{
+	margin-bottom: 20px;
+    margin-left:20px;
+	width: 30%;
+    float:left;
+    text-align: left;
+}
+
+#advanced-search-form .form-control{
+    padding: 12px 20px;
+    height: auto;
+    border-radius: 2px;
+}
+
+#advanced-search-form .radio-inline{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#advanced-search-form .gender{
+    width: 30%;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#advanced-search-form .btn{
+    width: 46%;
+    margin: 20px auto 0;
+    display: block;
+    outline: none;
+}
+
+@media screen and (max-width: 800px){
+    #advanced-search-form .form-group{
+        width: 45%;
+    }
+
+    #advanced-search-form{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 560px){
+    #advanced-search-form .form-group{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #advanced-search-form h2{
+        text-align: center;
+    }
+}
+
+.btnRegistrar{
+    background-color: rgb(243, 88, 25);
+    border-color: rgb(243, 88, 25);
+}
