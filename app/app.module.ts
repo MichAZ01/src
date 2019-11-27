@@ -7,6 +7,8 @@ import { HeaderInvitadoComponent } from './components/header-invitado/header-inv
 import { PaginaPrincipalComponent } from './components/paginas/pagina-principal/pagina-principal.component';
 import { FooterGeneralComponent } from './components/footer-general/footer-general.component';
 import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component';
+import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
+import { RegistrarseComponent } from './components/registrarse/registrarse.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.
     HeaderInvitadoComponent,
     PaginaPrincipalComponent,
     FooterGeneralComponent,
-    InicioSesionComponent
+    InicioSesionComponent,
+    RegistroUsuarioComponent,
+    RegistrarseComponent
   ],
   imports: [
     BrowserModule,
