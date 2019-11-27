@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PaginaPrincipalComponent } from './components/paginas/pagina-principal/pagina-principal.component';
+import { PaginaPrincipalComponent } from './paginas/pagina-principal/pagina-principal.component';
+import { PaginaUsuarioComponent } from './paginas/pagina-usuario/pagina-usuario.component';
 
 
 const routes: Routes = [
-  {path:'', component: PaginaPrincipalComponent}
+  {path:'principal', component: PaginaPrincipalComponent},
+  {path:'', component: PaginaUsuarioComponent}
 ];
 
 @NgModule({
