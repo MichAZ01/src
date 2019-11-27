@@ -1,0 +1,261 @@
+<div class="container container1">
+    <div class="row justify-content-center logIn-row">
+        <div class="container" id="advanced-search-form">
+            <span style="font-size: x-large; margin-right: 4px;">Información personal</span><a
+                href="#editarInformacionpersona" data-toggle="modal">
+                <img class="iconoEditar" src="assets/images/editar.png" alt="icono editar" (click)="editar()">
+            </a>
+            <hr class="divider">
+            <form>
+                <div class="form-group">
+                    <label for="primer-nombre">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Nombre" id="primer-nombre" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="primer-apellido">Primer apellido</label>
+                    <input type="text" class="form-control" placeholder="Primer apellido" id="primer-apellido" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="segundo-apellido">Segundo apellido</label>
+                    <input type="text" class="form-control" placeholder="Segundo apellido" id="segundo-apellido"
+                        disabled>
+                </div>
+                <div class="form-group">
+                    <label for="nacimiento">Fecha de nacimiento</label>
+                    <input type="text" class="form-control" placeholder="Fecha de nacimiento" id="nacimiento" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="hijos">Número de hijos</label>
+                    <input type="text" class="form-control" placeholder="Número de hijos" id="hijos" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidad">País de origen</label>
+                    <input type="text" class="dropdwn form-control" placeholder="País de origen" id="pais-info" value=""
+                        disabled>
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidad">País de residencia</label>
+                    <input type="text" class="form-control" placeholder="País de residencia" id="residencia-info"
+                        value="" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidad">Idioma de preferencia</label>
+                    <input type="text" class="form-control" placeholder="Idioma de preferencia" id="idiomas-info"
+                        value="" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidad">Provincia</label>
+                    <input type="text" class="form-control" placeholder="Provincia" id="provincia-info" value=""
+                        disabled>
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidad">Cantón</label>
+                    <input type="text" class="form-control" placeholder="Cantón" id="canton-info" value="" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidad">Distrito</label>
+                    <input type="text" class="form-control" placeholder="Distrito" id="distrito-info" value="" disabled>
+                </div>
+                <div class="form-group">
+                    <label>Sexo</label>
+                    <div class="radio form-control" style="border: white;">
+                        <label class="radio-inline">
+                            <input type="radio" name="esmujer" disabled>Mujer</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="eshombre" disabled>Hombre</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>¿Tiene familia?</label>
+                    <div class="radio form-control" style="border: white;">
+                        <label class="radio-inline">
+                            <input type="radio" name="sitienefamilia" disabled>Sí</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="notienefamilia" disabled>No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>¿Tiene mascotas?</label>
+                    <div class="radio form-control" style="border: white;">
+                        <label class="radio-inline">
+                            <input type="radio" name="sitienemascota" disabled>Sí</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="notienemascota" disabled>No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled>
+                        <label class="form-check-label" for="defaultCheck1">
+                            Discapacidad visual
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                        <label class="form-check-label" for="defaultCheck1">
+                            Discapacidad auditiva
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" disabled>
+                        <label class="form-check-label" for="defaultCheck1">
+                            Usa bastón
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" disabled>
+                        <label class="form-check-label" for="defaultCheck1">
+                            Anda en silla de ruedas
+                        </label>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="editarInformacionpersona" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Editar información personal</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                            (click)="cancelarEdit()">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid" id="contenedorInformacion" id="advanced-search-form">
+                            <form>
+                                <div class="form-group">
+                                    <label for="primer-nombre">Nombre</label>
+                                    <input type="text" class="form-control" placeholder="Nombre" id="primer-nombre"
+                                        disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="primer-apellido">Primer apellido</label>
+                                    <input type="text" class="form-control" placeholder="Primer apellido"
+                                        id="primer-apellido" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="segundo-apellido">Segundo apellido</label>
+                                    <input type="text" class="form-control" placeholder="Segundo apellido"
+                                        id="segundo-apellido" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nacimiento">Fecha de nacimiento</label>
+                                    <input type="text" class="form-control" placeholder="Fecha de nacimiento"
+                                        id="nacimiento" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="hijos">Número de hijos</label>
+                                    <input type="text" class="form-control" placeholder="Número de hijos" id="hijos"
+                                        disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nacionalidad">País de origen</label>
+                                    <input type="text" class="dropdwn form-control" placeholder="País de origen"
+                                        id="pais-info" value="" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nacionalidad">País de residencia</label>
+                                    <input type="text" class="form-control" placeholder="País de residencia"
+                                        id="residencia-info" value="" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nacionalidad">Idioma de preferencia</label>
+                                    <input type="text" class="form-control" placeholder="Idioma de preferencia"
+                                        id="idiomas-info" value="" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nacionalidad">Provincia</label>
+                                    <input type="text" class="form-control" placeholder="Provincia" id="provincia-info"
+                                        value="" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nacionalidad">Cantón</label>
+                                    <input type="text" class="form-control" placeholder="Cantón" id="canton-info"
+                                        value="" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nacionalidad">Distrito</label>
+                                    <input type="text" class="form-control" placeholder="Distrito" id="distrito-info"
+                                        value="" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label>Sexo</label>
+                                    <div class="radio form-control" style="border: white;">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="esmujer" disabled>Mujer</label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eshombre" disabled>Hombre</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>¿Tiene familia?</label>
+                                    <div class="radio form-control" style="border: white;">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="sitienefamilia" disabled>Sí</label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="notienefamilia" disabled>No</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>¿Tiene mascotas?</label>
+                                    <div class="radio form-control" style="border: white;">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="sitienemascota" disabled>Sí</label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="notienemascota" disabled>No</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
+                                            disabled>
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Discapacidad visual
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2"
+                                            disabled>
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Discapacidad auditiva
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck3"
+                                            disabled>
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Usa bastón
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck4"
+                                            disabled>
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Anda en silla de ruedas
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                        <input type="button" id="submit" class="btn btnRegistrar btn-success" value="Guardar Cambios"
+                            (click)="guardarEdit()">
+                        <button type="button" #dismiss style="display: none;" data-dismiss="modal"
+                            (click)="cancelarEdit()">&times;</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

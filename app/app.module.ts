@@ -9,6 +9,9 @@ import { FooterGeneralComponent } from './components/footer-general/footer-gener
 import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component';
 import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
 import { RegistrarseComponent } from './components/registrarse/registrarse.component';
+import { HeaderUsuarioComponent } from './components/header-usuario/header-usuario.component';
+import { PaginaUsuarioComponent } from './paginas/pagina-usuario/pagina-usuario.component';
+import { InformacionUsuarioComponent } from './components/informacion-usuario/informacion-usuario.component';
 import { EventosComponentComponent } from './components/eventos/eventos-component/eventos-component.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -30,6 +33,9 @@ export function mainServiceProvider(provider: MainserviceService) {
     InicioSesionComponent,
     RegistroUsuarioComponent,
     RegistrarseComponent,
+    HeaderUsuarioComponent,
+    PaginaUsuarioComponent,
+    InformacionUsuarioComponent,
     EventosComponentComponent,
     EditarEventoComponent,
     AgregarEventoComponent,
