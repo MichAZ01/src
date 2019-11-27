@@ -1,0 +1,111 @@
+<div class="container-fluid" style="min-height: 500px;">
+    <div class="row">
+        <a title="Agregar evento" style="margin-left: 80%; margin-top: 2%; margin-bottom: 1%;"
+            href="#agregarNuevaevento" data-toggle="modal" (click)="agregarevento()"><img class="iconoEditar"
+                src="assets/images/agregar.png" alt="icono agregar">
+        </a>
+    </div>
+
+    <div class="row" *ngFor="let evento of mainservice.eventos">
+        <div class="container-fluid" id="advanced-search-form">
+            <div>
+                <span>Evento</span>
+                <a href="#editarevento" data-toggle="modal"><img class="iconoEditar" (click)="editar(evento)"
+                        src="assets/images/editar.png" alt="icono editar"></a>
+                <a (click)="eliminar(evento)"><img class="iconoEditar" src="assets/images/eliminar.png"
+                        alt="icono eliminar" style="margin-left: 6px;"></a>
+            </div>
+            <hr class="divider">
+            <div id="contenedorInformacion">
+                <form style="color: black;">
+                    <div class="form-group">
+                        <label for="actividad-desc">Actividad</label>
+                        <input [(ngModel)]="evento.actividad" disabled type="text" class="form-control" placeholder="Actividad"
+                            id="actividad-desc" name="actividad-desc">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha-actividad">Fecha de actividad</label>
+                        <input [(ngModel)]="evento.fecha" disabled type="text" class="form-control" placeholder="Fecha de actividad"
+                            id="fecha-actividad" name="fecha-actividad">
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion-actividad">Descripción</label>
+                        <input [(ngModel)]="evento.descripcion" disabled type="text" class="form-control" placeholder="Descripción"
+                            id="descripcion-actividad" name="descripcion-actividad">
+                    </div>
+                    <div class="form-group">
+                        <label for="provincia-actividad">Provincia</label>
+                        <input [(ngModel)]="evento.ubicacion.provincia" disabled type="text" class="form-control" placeholder="Provincia"
+                            id="provincia-actividad" name="provincia-actividad">
+                    </div>
+                    <div class="form-group">
+                        <label for="canton-actividad">Cantón</label>
+                        <input [(ngModel)]="evento.ubicacion.canton" disabled type="text" class="form-control" placeholder="Cantón"
+                            id="canton-actividad" name="canton-actividad">
+                    </div>
+                    <div class="form-group">
+                        <label for="distrito-actividad">Distrito</label>
+                        <input [(ngModel)]="evento.ubicacion.distrito" disabled type="text" class="form-control" placeholder="Distrito"
+                            id="distrito-actividad" name="distrito-actividad">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre-contacto-actividad">Nombre contacto</label>
+                        <input [(ngModel)]="evento.informacioncontacto.nombre" disabled type="text" class="form-control" placeholder="Nombre contacto"
+                            id="nombre-contacto-actividad" name="nombre-contacto-actividad">
+                    </div>
+                    <div class="form-group">
+                        <label for="correo-contacto-actividad">Correo de contacto</label>
+                        <input [(ngModel)]="evento.informacioncontacto.correo" disabled type="text" class="form-control" placeholder="Correo de contacto"
+                            id="correo-contacto-actividad" name="correo-contacto-actividad">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono-actividad">Teléfono</label>
+                        <input [(ngModel)]="evento.informacioncontacto.telefono" disabled type="text" class="form-control" placeholder="Teléfono"
+                            id="telefono-actividad" name="telefono-actividad">
+                    </div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" data-backdrop="static" id="editarevento" role="dialog" aria-labelledby="omitLabel" aria-hidden="true">
+        <div class="modal-dialog" style="min-width: 70%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="deleteLabel">Editar evento</h4>
+                </div>
+                <div class="modal-body">
+                    <app-editar-evento></app-editar-evento>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                    <input type="button" class="btn btnRegistrar btn-success" (click)="guardarCambiosEdit()"
+                        value="Guardar Cambios">
+                    <input type="button" class="btn btn-default" #dismissCambiosEditeventos data-dismiss="modal"
+                        style="display: none;" value="Cancelar">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="agregarNuevaevento" role="dialog" aria-labelledby="omitLabel" aria-hidden="true">
+        <div class="modal-dialog" style="min-width: 90%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="deleteLabel">Nuevo evento</h4>
+                </div>
+                <div class="modal-body">
+                    <app-agregar-evento></app-agregar-evento>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                    <input type="button" class="btn btnRegistrar btn-success" (click)="guardarCambiosAgregar()"
+                        value="Guardar Cambios">
+                    <input type="button" class="btn btn-default" #dismissCambiosAgregareventos data-dismiss="modal"
+                        style="display: none;" value="Cancelar">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
